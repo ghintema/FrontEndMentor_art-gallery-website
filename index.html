@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Art gallery website</title>
+
+  <style>
+
+
+    /* DESIGN SYSTEM */
+
+    /* FONT-SIZES                 DESKTOP       TABLET          MOBILE
+
+    FS-Body                       22px/300      18px/300        18px/300
+    
+    FS-Footer                     18px          16px            16px
+
+    FS-Button                     20px/800      20px/800        20px/800
+
+    primary-heading               96px/900      70px/900        60px/900
+    
+    secondary-heading             70px/900      55px/900        50px/900
+    
+    third-heading                 60px/900      50px/900        50px/900
+
+    fourth-heading                36px/900      32px/900        32px/900   */
+
+
+
+  :root{
+
+    --font-style-heading: 
+    
+    /* FONT-SIZES GENERAL*/
+    --fs-200: 1rem;
+    --fs-300: 1.125rem; /*18px*/
+    --fs-400: 1.25rem;  /*20px*/
+    --fs-500: 1.375rem; /*22px*/
+    --fs-600: 2rem;   	/*32px*/
+    --fs-650: 2.25rem;  /*36px*/
+    --fs-700: 3.125rem; /*50px*/
+    --fs-750: 3.4375rem;/*55px*/
+    --fs-800: 3.75rem;  /*60px*/
+    --fs-900: 4.375rem; /*70px*/
+    --fs-1000:6.0rem;   /*96px*/ 
+
+    /* FONT-SIZES FOR MOBILE */
+    --fs-body:            var(--fs-300);
+    --fs-footer:          var(--fs-200);
+    --fs-button:          var(--fs-400);
+    --fs-primary-heading:    var(--fs-800);
+    --fs-secondary-heading:  var(--fs-700);
+    --fs-third-heading:      var(--fs-700);
+    --fs-fourth-heading:     var(--fs-600);   
+
+    /* LINE-SPACING GENERAL*/
+    --ls-200:   1.625rem;  /*26px*/
+    --ls-300:   1.75rem;   /*28px*/
+    --ls-400:   2.00rem;   /*32px*/
+    --ls-500:   2.25rem;   /*36px*/
+    --ls-600:   2.8125rem; /*45px*/  
+    --ls-650:   3.125rem;  /*50px*/ 
+    --ls-700:   3.4375rem; /*55px*/
+    --ls-750:   3.75rem;   /*60px*/
+    --ls-800:   4.0625rem; /*65px*/
+    --ls-900:   4.375rem;  /*70px*/
+    --ls-1000:  5.5rem;    /*88px*/
+
+    /* LINE-SPACING FOR MOBILE */
+    --ls-body:            var(--ls-300);
+    --ls-footer:          var(--ls-200);
+    --ls-primary-heading:     var(--ls-800);
+    --ls-secondary-heading:   var(--ls-600);
+    --ls-third-heading:       var(--ls-600);
+    --ls-fourth-heading:      var(--ls-400);
+
+    /* FONT-WEIGHTS */
+    --fw-light:       300;
+    --fw-strong:      800;
+    --fw-xtr-strong:  900;
+
+    --bg-clr-gold:      #d5966c;  
+    --bg-clr-black:     #151515;
+    --bg-clr-grey:      #444444;
+    --bg-clr-white:     #ffffff;
+  }
+
+  @media screen and (min-width:768px){
+    :root{
+      --fs-primary-heading:    var(--fs-900);
+      --fs-secondary-heading:  var(--fs-750);
+
+      --ls-primary-heading:     var(--ls-800);
+      --ls-secondary-heading:   var(--ls-650);
+    }
+  }
+
+  @media screen and (min-width:1440px){
+    :root{
+
+      /* FONT-SIZING FOR DESKTOP*/
+      --fs-body:            var(--fs-500);
+      --fs-footer:          var(--fs-300);
+      --fs-button:          var(--fs-400);
+      --fs-primary-heading:    var(--fs-1000);
+      --fs-secondary-heading:  var(--fs-900);
+      --fs-third-heading:      var(--fs-800);
+      --fs-fourth-heading:     var(--fs-650);
+
+
+      /* LINE-SPACING FOR DESKTOP */
+      --ls-body:            var(--ls-400);
+      --ls-footer:          var(--ls-300);
+      --ls-primary-heading:     var(--ls-1000);
+      --ls-secondary-heading:   var(--ls-900);
+      --ls-third-heading:       var(--ls-750);
+      --ls-fourth-heading:      var(--ls-500);
+    }
+  }
+
+  /* DEFINITION OF UTILITY-CLASSES */
+
+    /* UTILITY-CLASS FONT-SIZES */
+  .fs-body{font-size: var(--fs-body);}
+  .fs-footer{font-size: var(--fs-footer);}
+  .fs-button{font-size: var(--fs-button);}
+  .fs-primary-heading{font-size: var(--fs-primary-heading);}
+  .fs-secondary-heading{font-size: var(--fs-secondary-heading);}
+  .fs-third-heading{font-size: var(--fs-third-heading);}
+  .fs-fourth-heading{font-size: var(--fs-fourth-heading);}
+
+    /* UTILITY-CLASSES FONT-WEIGHT */
+  .fw-light{font-weight: var(--fw-light);}
+  .fw-strong{font-weight: var(--fw-strong);}
+  .fw-xtr-strong{font-weight: var(--fw-xtr-strong);}
+  
+    /* UTILITY-CLASSES LINE-SPACING */
+  .ls-body{line-height: var(--ls-body);}
+  .ls-footer{line-height: var(--ls-footer);}
+  .ls-button{line-height: var(--ls-button);}
+  .ls-primary-heading{line-height: var(--ls-primary-heading);}
+  .ls-secondary-heading{line-height: var(--ls-secondary-heading);}
+  .ls-third-heading{line-height: var(--ls-third-heading);}
+  .ls-fourth-heading{line-height: var(--ls-fourth-heading);}
+
+
+
+  </style>
+
+
+
+</head>
+
+<body>
+
+  Modern Art Gallery
+
+  The arts in the collection of the Modern Art Gallery all started 
+  from a spark of inspiration. Will these pieces inspire you? Visit 
+  us and find out.
+
+  Our location
+
+  Your day at the gallery
+
+  Wander through our distinct collections and find new insights about 
+  our artists. Dive into the details of their creative process.
+
+  Come &amp; be inspired
+
+  We’re excited to welcome you to our gallery and see how our collections 
+  influence you.
+
+  Modern Art Gallery
+
+  The Modern Art Gallery is free to all visitors and open seven days a week 
+  from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+</body>
+</html>
