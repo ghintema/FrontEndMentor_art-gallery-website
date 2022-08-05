@@ -10,7 +10,6 @@
 
   <style>
 
-
     /* DESIGN SYSTEM */
 
     /* FONT-SIZES                 DESKTOP       TABLET          MOBILE
@@ -29,11 +28,12 @@
 
     fourth-heading                36px/900      32px/900        32px/900   */
 
-
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;800;900&family=Outfit:wght@300&display=swap');
 
   :root{
 
-    --font-style-heading: 
+    --ff-headings: 'Big Shoulders Display';
+    --ff-text:    'Outfit';
     
     /* FONT-SIZES GENERAL*/
     --fs-200: 1rem;
@@ -83,10 +83,10 @@
     --fw-strong:      800;
     --fw-xtr-strong:  900;
 
-    --bg-clr-gold:      #d5966c;  
-    --bg-clr-black:     #151515;
-    --bg-clr-grey:      #444444;
-    --bg-clr-white:     #ffffff;
+    --clr-gold:      #d5966c;  
+    --clr-black:     #151515;
+    --clr-grey:      #444444;
+    --clr-white:     #ffffff;
   }
 
   @media screen and (min-width:768px){
@@ -124,6 +124,11 @@
 
   /* DEFINITION OF UTILITY-CLASSES */
 
+    /* UTILITY-CLASS FONT-FAMILY*/
+  .ff-headings{font-family: var(--ff-headings);}
+  .ff-text{font-family: var(--ff-text);}
+  
+
     /* UTILITY-CLASS FONT-SIZES */
   .fs-body{font-size: var(--fs-body);}
   .fs-footer{font-size: var(--fs-footer);}
@@ -147,16 +152,114 @@
   .ls-third-heading{line-height: var(--ls-third-heading);}
   .ls-fourth-heading{line-height: var(--ls-fourth-heading);}
 
+  .bg-clr-gold{background-color: var(--clr-gold);}
+  .bg-clr-black{background-color: var(--clr-black);}
+  .f-clr-withe{color: var(--clr-white);}
+  .f-clr-grey{color: var(--clr-grey);}
 
+  * {
+    margin:0px;
+    padding:0px;
+    border:none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  body{
+    width:375px;
+    margin:auto;
+  }
+  
+  .hero{margin:16px}
+   h1{margin:32px 0px;}
+  .hero-text{margin:32px 0px}
+
+  a{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 260px;
+  }
+  .button-long-part, .button-short-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:204px;
+    height: 72px;
+  }
+
+  .button-short-part{width: 56px;}
+  main{margin:120px 16px}
+  .your-day-heading{margin:22px 0px}
+  .your-day-text{margin:22px 0px 32px}
+
+  [class^="main-img"] {
+    margin:8px 0px;     /* Why aren't these margins collapsing????? */
+  }
+
+  @media screen and (max-width:768px) { /* Line-brake via css-Pseudoelement for Mobile and tablet*/
+    .brake::before{ 
+      content: "\A";
+      white-space: pre;
+    }
+  }
+
+  .be-inspired{
+    height: 293px;
+    padding:48px 24px;
+  }
+  .be-inspired-text{margin:24px 0px}
+  footer{padding:48px 32px}
+  .footer-text{margin:38px 0px}
 
   </style>
 
 
-
 </head>
-
+ 
 <body>
 
+  <header>
+    <img class="hero-img" src="assets/mobile/image-hero.jpg" alt="Kunstwerk mit alter Dame">
+    <div class="hero">
+      <h1 class="ff-headings fs-primary-heading fw-xtr-strong ls-primary-heading">MODERN<br>ART GALLERY</h1>
+      <p class="hero-text fs-body fw-light ls-body f-clr-grey"> The arts in the collection of the Modern Art Gallery all started 
+        from a spark of inspiration. Will these pieces inspire you? Visit 
+        us and find out.</p>
+      <a class="our-location" href="www.google.de">
+          <div class="button-long-part bg-clr-black">
+            <p class="ff-headings fs-button fw-strong f-clr-withe">OUR LOCATION</p>
+          </div>
+          <div class="button-short-part bg-clr-gold">
+            <img class="icon-arrow" src="assets/icon-arrow-right.svg" alt="icon arrow right">
+          </div>
+      </a>
+    </div>
+    </header>
+
+    <main>
+      <img class="main-img-1" src="assets/mobile/image-grid-1.jpg" alt="Bild vom Inneren der Gallerie">
+      <div class="your-day">
+        <h3 class="your-day-heading ff-headings fs-third-heading fw-strong ls-third-heading">YOUR DAY <span class="brake"></span> AT THE GALLERY</h3>
+        <p class="your-day-text fs-body fw-light ls-body f-clr-grey"> Wander through our distinct collections and find new insights about 
+          our artists. Dive into the details of their creative process.</p>
+      </div>
+      <img class="main-img-2" src="assets/mobile/image-grid-2.jpg" alt="Bild vom Inneren der Gallerie">
+      <img class="main-img-3" src="assets/mobile/image-grid-3.jpg" alt="Bild vom Inneren der Gallerie">
+      <div class="be-inspired bg-clr-black">
+        <h3 class="be-inspired-heading ff-headings fs-third-heading fw-strong ls-third-heading f-clr-withe">COME&BE INSPIRED</h3>
+        <p class="be-inspired-text ff-text fs-body fw-light ls-body f-clr-withe"> We’re excited to welcome you to our gallery and see how our collections 
+          influence you.</p>
+      </div> 
+    </main>
+    <footer class="bg-clr-black">
+      <img class="footer-logo" src="assets/logo-light.svg" alt="Logo in withe">
+      <p class="footer-text ff-text fs-footer fw-light ls-footer f-clr-withe">The Modern Art Gallery is free to all visitors and open seven days a week 
+        from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
+
+    </footer>
+
+
+  </header>
   Modern Art Gallery
 
   The arts in the collection of the Modern Art Gallery all started 
