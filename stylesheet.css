@@ -1,0 +1,272 @@
+ /* DESIGN SYSTEM */
+
+    /* FONT-SIZES                 DESKTOP       TABLET          MOBILE
+
+    FS-Body                       22px/300      18px/300        18px/300
+    
+    FS-Footer                     18px          16px            16px
+
+    FS-Button                     20px/800      20px/800        20px/800
+
+    primary-heading               96px/900      70px/900        60px/900
+    
+    secondary-heading             70px/900      55px/900        50px/900
+    
+    third-heading                 60px/900      50px/900        50px/900
+
+    fourth-heading                36px/900      32px/900        32px/900   */
+
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;800;900&family=Outfit:wght@300&display=swap');
+
+  :root{
+
+    --ff-headings: 'Big Shoulders Display';
+    --ff-text:    'Outfit';
+    
+    /* FONT-SIZES GENERAL*/
+    --fs-200: 1rem;
+    --fs-300: 1.125rem; /*18px*/
+    --fs-400: 1.25rem;  /*20px*/
+    --fs-500: 1.375rem; /*22px*/
+    --fs-600: 2rem;   	/*32px*/
+    --fs-650: 2.25rem;  /*36px*/
+    --fs-700: 3.125rem; /*50px*/
+    --fs-750: 3.4375rem;/*55px*/
+    --fs-800: 3.75rem;  /*60px*/
+    --fs-900: 4.375rem; /*70px*/
+    --fs-1000:6.0rem;   /*96px*/ 
+
+    /* FONT-SIZES FOR MOBILE */
+    --fs-body:            var(--fs-300);
+    --fs-footer:          var(--fs-200);
+    --fs-button:          var(--fs-400);
+    --fs-primary-heading:    var(--fs-800);
+    --fs-secondary-heading:  var(--fs-700);
+    --fs-third-heading:      var(--fs-700);
+    --fs-fourth-heading:     var(--fs-600);   
+
+    /* LINE-SPACING GENERAL*/
+    --ls-200:   1.625rem;  /*26px*/
+    --ls-300:   1.75rem;   /*28px*/
+    --ls-400:   2.00rem;   /*32px*/
+    --ls-500:   2.25rem;   /*36px*/
+    --ls-600:   2.8125rem; /*45px*/  
+    --ls-650:   3.125rem;  /*50px*/ 
+    --ls-700:   3.4375rem; /*55px*/
+    --ls-750:   3.75rem;   /*60px*/
+    --ls-800:   4.0625rem; /*65px*/
+    --ls-900:   4.375rem;  /*70px*/
+    --ls-1000:  5.5rem;    /*88px*/
+
+    /* LINE-SPACING FOR MOBILE */
+    --ls-body:            var(--ls-300);
+    --ls-footer:          var(--ls-200);
+    --ls-primary-heading:     var(--ls-800);
+    --ls-secondary-heading:   var(--ls-600);
+    --ls-third-heading:       var(--ls-600);
+    --ls-fourth-heading:      var(--ls-400);
+
+    /* FONT-WEIGHTS */
+    --fw-light:       300;
+    --fw-strong:      800;
+    --fw-xtr-strong:  900;
+
+    --clr-gold:      #d5966c;  
+    --clr-black:     #151515;
+    --clr-grey:      #444444;
+    --clr-white:     #ffffff;
+  }
+
+  @media screen and (min-width:768px){
+    :root{
+      --fs-primary-heading:    var(--fs-900);
+      --fs-secondary-heading:  var(--fs-750);
+
+      --ls-primary-heading:     var(--ls-800);
+      --ls-secondary-heading:   var(--ls-650);
+    }
+  }
+
+  @media screen and (min-width:1440px){
+    :root{
+
+      /* FONT-SIZING FOR DESKTOP*/
+      --fs-body:            var(--fs-500);
+      --fs-footer:          var(--fs-300);
+      --fs-button:          var(--fs-400);
+      --fs-primary-heading:    var(--fs-1000);
+      --fs-secondary-heading:  var(--fs-900);
+      --fs-third-heading:      var(--fs-800);
+      --fs-fourth-heading:     var(--fs-650);
+
+
+      /* LINE-SPACING FOR DESKTOP */
+      --ls-body:            var(--ls-400);
+      --ls-footer:          var(--ls-300);
+      --ls-primary-heading:     var(--ls-1000);
+      --ls-secondary-heading:   var(--ls-900);
+      --ls-third-heading:       var(--ls-750);
+      --ls-fourth-heading:      var(--ls-500);
+    }
+  }
+
+  /* DEFINITION OF UTILITY-CLASSES */
+
+    /* UTILITY-CLASS FONT-FAMILY*/
+  .ff-headings{font-family: var(--ff-headings);}
+  .ff-text{font-family: var(--ff-text);}
+  
+
+    /* UTILITY-CLASS FONT-SIZES */
+  .fs-body{font-size: var(--fs-body);}
+  .fs-footer{font-size: var(--fs-footer);}
+  .fs-button{font-size: var(--fs-button);}
+  .fs-primary-heading{font-size: var(--fs-primary-heading);}
+  .fs-secondary-heading{font-size: var(--fs-secondary-heading);}
+  .fs-third-heading{font-size: var(--fs-third-heading);}
+  .fs-fourth-heading{font-size: var(--fs-fourth-heading);}
+
+    /* UTILITY-CLASSES FONT-WEIGHT */
+  .fw-light{font-weight: var(--fw-light);}
+  .fw-strong{font-weight: var(--fw-strong);}
+  .fw-xtr-strong{font-weight: var(--fw-xtr-strong);}
+  
+    /* UTILITY-CLASSES LINE-SPACING */
+  .ls-body{line-height: var(--ls-body);}
+  .ls-footer{line-height: var(--ls-footer);}
+  .ls-button{line-height: var(--ls-button);}
+  .ls-primary-heading{line-height: var(--ls-primary-heading);}
+  .ls-secondary-heading{line-height: var(--ls-secondary-heading);}
+  .ls-third-heading{line-height: var(--ls-third-heading);}
+  .ls-fourth-heading{line-height: var(--ls-fourth-heading);}
+
+  .bg-clr-gold{background-color: var(--clr-gold);}
+  .bg-clr-black{background-color: var(--clr-black);}
+  .f-clr-withe{color: var(--clr-white);}
+  .f-clr-grey{color: var(--clr-grey);}
+  .f-clr-gold{color: var(--clr-gold)}
+
+  * {
+    margin:0px;
+    padding:0px;
+    border:none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  body{
+    min-width: 250px;
+    max-width:475px;
+    margin:auto;
+    border:1px solid red;
+  }
+
+  .hero{margin:32px 16px}
+  .hero-text{margin:32px 0px}
+  .hero-img{width:100%}
+
+  a{
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 260px;
+    min-width: 200px;
+  }
+  .button-long-part, .button-short-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:78.4615%;
+    height: 72px;
+    letter-spacing: 3.64px;
+  }
+
+  .button-short-part{width: 21.5385%;}
+   main{margin:120px 16px;}
+  .your-day-heading{margin:22px 0px}
+  .your-day-text{margin:22px 0px 32px}
+
+  [class^="main-img"] {
+    margin:8px 0px;     /* Why aren't these margins collapsing????? */
+    width:100%;
+  }
+  /* Line-brake via css-Pseudoelement for mobile and tablet only*/
+  @media screen and (max-width:1440px) { 
+    .brake::before{ 
+      content: "\A";
+      white-space: pre;
+    }
+  }
+
+  .be-inspired{padding:48px 24px 30px;}
+  .be-inspired-text{margin:20px 0px}
+   footer{padding:48px 32px}
+  .footer-text{margin:38px 0px}
+  .social-icons{
+    display: flex;
+    gap:20px;
+  }
+
+  @media screen and (min-width:768px) {
+    body{
+      max-width:975px;
+      margin:auto;
+      border:1px solid red;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      border:1px solid green;
+      gap:0px;
+    }
+    .hero{
+      width:339px; /* fixed width for fixed height */
+      margin-left:-48px; /* overlapping to img */
+    }
+    .hero-img{
+      content: url(assets/tablet/image-hero.jpg);
+      width:56.9%; /* 437px/768px */
+    }
+
+    main{
+      display:grid;
+      grid-template-columns: 1fr 15.53% 1fr;  
+      grid-template-rows:auto auto auto;
+      grid-gap: 11px;
+      margin:120px 39px;
+      align-items: stretch;
+    }
+    .your-day{
+      grid-row: 1; /* out of auto-positioning */
+      align-self: center;
+      width:223px;
+    }
+    .main-img-1{
+      content: url("assets/tablet/image-grid-1.jpg");
+      grid-column:2 / span 2;
+      margin:0px;
+    }
+    .main-img-2{
+      content: url("assets/tablet/image-grid-2.jpg");
+      grid-column:1 / span 2;
+      grid-row:span 2;
+      margin:0px;
+    }
+    .main-img-3{
+      content: url("assets/tablet/image-grid-3.jpg");
+      margin:0px;
+    }
+    .be-inspired{
+      height: 100%;
+    }
+
+    footer{
+      display: flex;
+      justify-content: space-between;
+      align-items:flex-start;
+      padding:39px;
+    }
+    .footer-text{
+      margin:0px;
+      width:281px;
+    }
+  }
