@@ -1,0 +1,183 @@
+ 
+ 
+ .hero{margin:32px 16px}
+  h1 {margin:32px 16px}
+  .hero-text{margin:32px 0px}
+  .hero-img{width:100%}
+
+  a{display: flex;}
+  .button-long-part, 
+  .button-short-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis:204px;
+    height: 72px;
+    letter-spacing: 3.64px;
+  }
+
+  .button-short-part{flex-basis: 56px;}
+   main{margin:120px 16px;}
+  .your-day-heading{margin:22px 0px}
+  .your-day-text{margin:22px 0px 32px}
+
+  [class^="main-img"] {
+    margin:8px 0px;     /* Why aren't these margins collapsing????? */
+    width:100%;
+  }
+  /* Line-brake via css-Pseudoelement for mobile and tablet only*/
+  @media screen and (max-width:1400px) { 
+    .brake::before{ 
+      content: "\A";
+      white-space: pre;
+    }
+  }
+
+  .be-inspired{padding:48px 24px 30px;}
+  .be-inspired-text{margin:20px 0px}
+   footer{padding:48px 32px}
+  .footer-text{margin:38px 0px}
+  .social-icons{
+    display: flex;
+    gap:20px;
+  }
+    /* Positioning exklusively for tablet */
+  @media screen and (min-width:768px) and (max-width:1439px) {
+    body{
+      max-width:975px;
+      margin:auto;
+     
+    }
+    header{
+      position: relative;
+    }
+    .hero-img{
+      content: url(assets/tablet/image-hero.jpg);
+      width:56.9%; /* 437px/768px */
+    }
+  
+    h1.headline{
+      position: absolute;
+      top:105px;
+      left:50.65%; /* 389px / 768px */
+      margin:32px 0px
+    }
+    .hero{
+      position:absolute;
+      top:283px;
+      left:50.65%; /* 389px / 768px */
+      margin:0px;
+      width:339px; 
+    }
+    
+  }
+    /* Grid-definition for both, tablet and desktop */
+  @media screen and (min-width:768px) {
+    main{
+      display:grid;
+      grid-template-columns: 1fr 15.53% 1fr;  
+      grid-template-rows:auto auto auto;
+      grid-gap: 11px;
+      margin:120px 39px;
+      align-items: stretch;
+    }
+    .your-day{
+      grid-row: 1; /* out of auto-positioning */
+      align-self: center;
+      justify-self: center;
+      position: relative;
+      right:23px;
+      width:223px;
+    }
+    .main-img-1{
+      content: url("assets/tablet/image-grid-1.jpg");
+      grid-column:2 / span 2;
+      margin:0px;
+    }
+    .main-img-2{
+      content: url("assets/tablet/image-grid-2.jpg");
+      grid-column:1 / span 2;
+      grid-row:span 2;
+      margin:0px;
+    }
+    .main-img-3{
+      content: url("assets/tablet/image-grid-3.jpg");
+      margin:0px;
+    }
+    .be-inspired{
+      height: 100%;
+    }
+
+    footer{
+      display: flex;
+      justify-content: space-between;
+      align-items:flex-start;
+      padding:56px 39px;
+    }
+    .footer-text{
+      margin:0px;
+      width:281px;
+    }
+  }
+
+
+  @media screen and (min-width:1440px) {
+
+    body{
+      max-width:1440px;
+      margin:auto;
+
+    }
+
+    header{
+      display: flex;
+      align-items: center;
+      background:linear-gradient(
+        to right,
+        black 0%,
+        black 450px,
+        white 450px,
+        white 100%
+      )
+    }
+    .hero-img{
+      content: url("assets/desktop/image-hero.jpg");
+      position: relative;
+      left:420px;
+      width:540px;
+    }
+    h1{
+      position: relative;
+      right:405px;
+      bottom:120px;
+      color:white;
+      z-index: 2;
+      mix-blend-mode: difference;
+    }
+    .hero{
+      position: relative;
+      right:93px;
+      bottom: 100px;
+      width:350px;
+      z-index: 1; /* to be seen over the image */
+      margin:0px;
+    }
+    .hero-text{margin:64px 0px}
+    
+    main{
+      grid-gap:30px;
+      margin:180px 165px;
+    }
+    .your-day{
+      justify-self: flex-start;
+      right: 0px;
+      width: 330px;
+    }
+    .main-img-1{content: url("assets/desktop/image-grid-1.jpg");}
+    .main-img-2{content: url("assets/desktop/image-grid-2.jpg");}
+    .main-img-3{content: url("assets/desktop/image-grid-3.jpg");}
+    
+    footer{padding:80px 165px} 
+  } 
+  
+  

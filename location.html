@@ -6,26 +6,18 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="stylesheet-location.css">
 
   <title>Frontend Mentor | Art gallery website</title>
+  <!-- leaflet  css and js files-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
 </head>
-<style>
-  .map {
-    height: 300px;
-    background-color: red;
-  }
-  main{ 
-    padding:48px 16px; 
-    margin:0px;
-  }
-  h4{margin:48px 0px 0px}
 
-  .adress, .describe-location{margin:20px 0px}
-
-</style>
 <body>
   <header>
-    <div class="map">
+    
+    <div id="map">
       <a class="our-location" href="index.html">
         <div class="button-short-part bg-clr-gold">
           <img class="icon-arrow" src="assets/icon-arrow-left.svg" alt="icon arrow right">
@@ -33,12 +25,12 @@
         <div class="button-long-part bg-clr-black">
           <p class="ff-headings fs-button fw-strong f-clr-withe">BACK TO HOME</p>
         </div>
-      </a>
+      </a>  
     </div>
   </header>
   <main class="bg-clr-black">
+    <h2 class="ff-headings fs-secondary-heading fw-xtr-strong ls-secondary-heading f-clr-withe">OUR LOCATION</h2>
     <div class="our-location">
-      <h2 class="ff-headings fs-secondary-heading fw-xtr-strong ls-secondary-heading f-clr-withe">OUR LOCATION</h2>
       <h4 class="ff-headings fs-fourth-heading fw-xtr-strong ls-fourth-heading f-clr-gold">99 KING STREET</h4>
       <p class="adress ff-text fs-body fw-light ls-body f-clr-withe">99 King Street<br>
         Newport<br>
@@ -59,23 +51,17 @@
       <img class="scial-icon" src="assets/icon-twitter-dark.svg" alt="icon twitter">
     </div>
   </footer>
-  Back to Home
-
-  Our location
-
-  99 King Street
-  Newport
-  RI 02840
-  United States of America
-
-  Our newly opened gallery is located near the Edward King House on 99 King 
-  Street, the Modern Art Gallery is free to all visitors and open seven days 
-  a week from 8am to 9pm.
-
-  Modern Art Gallery
-
-  The Modern Art Gallery is free to all visitors and open seven days a week 
-  from 8am to 9pm. Find us at 99 King Street, Newport, USA.
-
+  
+  <script>
+    var map = L.map('map').setView([0, 0], 1);
+    L.tileLayer('https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=O0DqbHIwAbrdiY4xooXw',{
+      tileSize: 512,
+      zoomOffset: -1,
+      minZoom: 1, 
+      attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+      crossOrigin: true
+    }).addTo(map);
+    var marker = L.marker([51.3, -0.09]).addTo(map)
+  </script>
 </body>
 </html>
