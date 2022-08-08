@@ -1,7 +1,11 @@
 
 
-
-a{display: flex;}
+a{
+  display: flex;
+  max-width:260px;
+}
+ a:hover > .button-long-part{background-color: var(--clr-gold);}
+ a:hover > .button-short-part{background-color: var(--clr-black);}
 .button-long-part, .button-short-part{
   display: flex;
   align-items: center;

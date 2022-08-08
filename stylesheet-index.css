@@ -5,7 +5,12 @@
   .hero-text{margin:32px 0px}
   .hero-img{width:100%}
 
-  a{display: flex;}
+  a{
+    display: flex;
+    max-width:260px;
+  }
+   a:hover > .button-long-part{background-color: var(--clr-gold);}
+   a:hover > .button-short-part{background-color: var(--clr-black);}
   .button-long-part, 
   .button-short-part{
     display: flex;
@@ -15,8 +20,12 @@
     height: 72px;
     letter-spacing: 3.64px;
   }
-
   .button-short-part{flex-basis: 56px;}
+
+
+ 
+
+
    main{margin:120px 16px;}
   .your-day-heading{margin:22px 0px}
   .your-day-text{margin:22px 0px 32px}
